@@ -1,5 +1,6 @@
 import { buildConfig } from 'payload/config'
 import path from 'path'
+
 // import Examples from './collections/Examples';
 import Categories from './collections/Categories'
 import Files from './collections/Files'

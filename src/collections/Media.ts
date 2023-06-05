@@ -22,6 +22,12 @@ const Images: CollectionConfig = {
         position: 'centre'
       },
       {
+        name: 'hero',
+        width: 760,
+        height: 499,
+        position: 'centre'
+      },
+      {
         name: 'featured',
         width: 1000,
         // By specifying `undefined` or leaving a height undefined,

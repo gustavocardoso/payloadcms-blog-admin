@@ -1,8 +1,8 @@
 import { CollectionConfig } from 'payload/types'
 
-import Quote from '../blocks/Quote'
-import Content from '../blocks/Content'
 import Alert from '../blocks/Alert'
+import Content from '../blocks/Content'
+import Quote from '../blocks/Quote'
 
 const Posts: CollectionConfig = {
   slug: 'posts',
@@ -65,7 +65,7 @@ const Posts: CollectionConfig = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [Quote, Content, Alert]
+              blocks: [Content, Alert, Quote]
             }
           ]
         }
