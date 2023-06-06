@@ -1,7 +1,7 @@
 import { CollectionConfig } from 'payload/types'
 
 import Alert from '../blocks/Alert'
-import Content from '../blocks/Content'
+import Copy from '../blocks/Copy'
 import Quote from '../blocks/Quote'
 
 const Posts: CollectionConfig = {
@@ -65,7 +65,7 @@ const Posts: CollectionConfig = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [Content, Alert, Quote]
+              blocks: [Copy, Alert, Quote]
             }
           ]
         }

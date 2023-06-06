@@ -2,6 +2,7 @@ import { CollectionConfig } from 'payload/types'
 
 import Alert from '../blocks/Alert'
 import Hero from '../blocks/Hero'
+import Copy from '../blocks/Copy'
 import Content from '../blocks/Content'
 import Quote from '../blocks/Quote'
 
@@ -24,7 +25,7 @@ const Pages: CollectionConfig = {
     {
       name: 'layout',
       type: 'blocks',
-      blocks: [Quote, Content, Alert, Hero]
+      blocks: [Quote, Copy, Alert, Hero, Content]
     },
     {
       name: 'status',

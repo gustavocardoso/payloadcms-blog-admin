@@ -1,13 +1,13 @@
 import { Block } from 'payload/types'
 
-const Content: Block = {
-  slug: 'content',
+const Copy: Block = {
+  slug: 'copy',
   fields: [
     {
-      name: 'content',
+      name: 'copy',
       type: 'richText'
     }
   ]
 }
 
-export default Content
+export default Copy

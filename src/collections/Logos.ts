@@ -12,7 +12,8 @@ const Logos: CollectionConfig = {
     imageSizes: [
       {
         name: 'thumbnail',
-        height: 250,
+        width: 350,
+        height: undefined,
         position: 'centre'
       }
     ],

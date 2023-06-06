@@ -20,17 +20,17 @@ export default buildConfig({
     user: Users.slug
   },
   collections: [
-    Categories,
-    Files,
-    Images,
-    Logos,
     Pages,
     Posts,
+    Categories,
+    Images,
+    Logos,
+    Files,
     Users
     // Add Collections here
     // Examples,
   ],
-  globals: [Navigation, SiteOptions, SocialLinks],
+  globals: [Navigation, SocialLinks, SiteOptions],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts')
   },

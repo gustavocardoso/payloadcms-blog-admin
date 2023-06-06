@@ -1,4 +1,6 @@
 import { Block } from 'payload/types'
+import backgroundOptions from './utils/bgOptions'
+import buttonBgOptions from './utils/buttonBgOptions'
 
 const Hero: Block = {
   slug: 'hero',
@@ -80,24 +82,7 @@ const Hero: Block = {
                 {
                   name: 'style',
                   type: 'select',
-                  options: [
-                    {
-                      label: 'Primary',
-                      value: 'primary'
-                    },
-                    {
-                      label: 'Secondary',
-                      value: 'secondary'
-                    },
-                    {
-                      label: 'Outline White',
-                      value: 'outline-white'
-                    },
-                    {
-                      label: 'Outline Black',
-                      value: 'outline-black'
-                    }
-                  ]
+                  options: buttonBgOptions
                 }
               ]
             }
@@ -119,24 +104,7 @@ const Hero: Block = {
             {
               name: 'background',
               type: 'select',
-              options: [
-                {
-                  label: 'None',
-                  value: 'none'
-                },
-                {
-                  label: 'Primary',
-                  value: 'primary'
-                },
-                {
-                  label: 'Secondary',
-                  value: 'secondary'
-                },
-                {
-                  label: 'Image',
-                  value: 'image'
-                }
-              ]
+              options: backgroundOptions
             },
             {
               name: 'backgroundImage',
@@ -144,7 +112,6 @@ const Hero: Block = {
               relationTo: 'images',
               admin: {
                 condition: (data, siblingData, { user }) => {
-                  console.log(data)
                   if (siblingData.background === 'image') {
                     return true
                   } else {
