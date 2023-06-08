@@ -4,10 +4,12 @@ import path from 'path'
 // import Examples from './collections/Examples';
 import Categories from './collections/Categories'
 import Files from './collections/Files'
+import Icons from './collections/Icons'
 import Images from './collections/Media'
 import Logos from './collections/Logos'
 import Pages from './collections/Pages'
 import Posts from './collections/Posts'
+import Testimonials from './collections/Testimonials'
 import Users from './collections/Users'
 
 import SiteOptions from './globals/SiteOptions'
@@ -20,12 +22,14 @@ export default buildConfig({
     user: Users.slug
   },
   collections: [
-    Pages,
-    Posts,
     Categories,
+    Files,
+    Icons,
     Images,
     Logos,
-    Files,
+    Pages,
+    Posts,
+    Testimonials,
     Users
     // Add Collections here
     // Examples,

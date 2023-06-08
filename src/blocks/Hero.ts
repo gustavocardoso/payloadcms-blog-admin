@@ -3,7 +3,7 @@ import backgroundOptions from './utils/bgOptions'
 import buttonBgOptions from './utils/buttonBgOptions'
 
 const Hero: Block = {
-  slug: 'hero',
+  slug: 'hero-block',
   fields: [
     {
       type: 'tabs',
@@ -68,6 +68,7 @@ const Hero: Block = {
               name: 'buttons',
               type: 'array',
               label: 'Buttons',
+              maxRows: 2,
               fields: [
                 {
                   name: 'text',

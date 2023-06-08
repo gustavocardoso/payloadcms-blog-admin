@@ -1,7 +1,11 @@
 import { Block } from 'payload/types'
 
 const Copy: Block = {
-  slug: 'copy',
+  slug: 'copy-block',
+  labels: {
+    singular: 'Copy',
+    plural: 'Copies'
+  },
   fields: [
     {
       name: 'copy',

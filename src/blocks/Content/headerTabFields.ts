@@ -1,5 +1,5 @@
 import { Field } from 'payload/types'
-import Alert from '../Alert'
+import Alert from '../Heading'
 import Copy from '../Copy'
 import Quote from '../Quote'
 
@@ -151,6 +151,10 @@ const headerTabFields: Function = (): Field[] => [
           {
             label: 'H2',
             value: 'h2'
+          },
+          {
+            label: 'H3',
+            value: 'h3'
           }
         ],
         admin: {

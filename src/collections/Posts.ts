@@ -1,8 +1,9 @@
 import { CollectionConfig } from 'payload/types'
 
-import Alert from '../blocks/Alert'
+import Alert from '../blocks/Heading'
 import Copy from '../blocks/Copy'
 import Quote from '../blocks/Quote'
+import slug from '../fields/slug'
 
 const Posts: CollectionConfig = {
   slug: 'posts',
@@ -89,17 +90,22 @@ const Posts: CollectionConfig = {
         position: 'sidebar'
       }
     },
-    {
-      name: 'publishedDate',
-      type: 'date',
-      admin: {
-        position: 'sidebar'
-      }
-    },
+    slug(),
     {
       name: 'author',
       type: 'relationship',
       relationTo: 'users',
+      maxDepth: 0,
+      // defaultValues can use functions to return data to populate the create form and also when making POST requests the server will use the value or function to fill in any undefined fields before validation occurs
+      defaultValue: ({ user }) => user.id,
+      admin: {
+        position: 'sidebar',
+        readOnly: true
+      }
+    },
+    {
+      name: 'publishedDate',
+      type: 'date',
       admin: {
         position: 'sidebar'
       }

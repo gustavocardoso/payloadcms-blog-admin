@@ -4,9 +4,10 @@ import styleTabFields from './styleTabFields'
 import backgroundTabFields from './backgroundTabFields'
 import optionsTabFields from './optionsTabFields'
 import headerTabFields from './headerTabFields'
+import contentTabFields from './contentTabFields'
 
 const Content: Block = {
-  slug: 'content',
+  slug: 'content-block',
   fields: [
     {
       type: 'tabs',
@@ -18,6 +19,10 @@ const Content: Block = {
         {
           label: 'Header Content',
           fields: headerTabFields
+        },
+        {
+          label: 'Content',
+          fields: contentTabFields
         },
         {
           label: 'Background',

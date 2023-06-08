@@ -1,7 +1,4 @@
 import { Field } from 'payload/types'
-import Alert from '../Alert'
-import Copy from '../Copy'
-import Quote from '../Quote'
 
 const styleTabFields: Function = (): Field[] => [
   {
@@ -139,80 +136,6 @@ const styleTabFields: Function = (): Field[] => [
         ]
       }
     ]
-  },
-  {
-    type: 'group',
-    label: 'Column 1',
-    name: 'columnOne',
-    fields: [
-      {
-        name: 'layout',
-        type: 'blocks',
-        blocks: [Quote, Copy, Alert]
-      }
-    ],
-    admin: {
-      condition: (data, siblingData, { user }) => {
-        console.log(siblingData)
-        if (
-          siblingData.numberOfColumns !== null &&
-          (siblingData.numberOfColumns === 'one-col' ||
-            siblingData.numberOfColumns === 'two-col' ||
-            siblingData.numberOfColumns === 'three-col')
-        ) {
-          return true
-        } else {
-          return false
-        }
-      }
-    }
-  },
-  {
-    type: 'group',
-    label: 'Column 2',
-    name: 'columnTwo',
-    fields: [
-      {
-        name: 'layout',
-        type: 'blocks',
-        blocks: [Quote, Copy, Alert]
-      }
-    ],
-    admin: {
-      condition: (data, siblingData, { user }) => {
-        console.log(siblingData)
-        if (
-          siblingData.numberOfColumns !== null &&
-          (siblingData.numberOfColumns === 'two-col' || siblingData.numberOfColumns === 'three-col')
-        ) {
-          return true
-        } else {
-          return false
-        }
-      }
-    }
-  },
-  {
-    type: 'group',
-    label: 'Column 3',
-    name: 'columnThree',
-    fields: [
-      {
-        name: 'layout',
-        type: 'blocks',
-        blocks: [Quote, Copy, Alert]
-      }
-    ],
-    admin: {
-      condition: (data, siblingData, { user }) => {
-        console.log(siblingData)
-        if (siblingData.numberOfColumns !== null && siblingData.numberOfColumns === 'three-col') {
-          return true
-        } else {
-          return false
-        }
-      }
-    }
   }
 ]
 

@@ -1,10 +1,8 @@
 import { CollectionConfig } from 'payload/types'
 
-import Alert from '../blocks/Alert'
-import Hero from '../blocks/Hero'
-import Copy from '../blocks/Copy'
 import Content from '../blocks/Content'
-import Quote from '../blocks/Quote'
+import Hero from '../blocks/Hero'
+import Ribbon from '../blocks/Ribbon'
 
 const Pages: CollectionConfig = {
   slug: 'pages',
@@ -25,7 +23,7 @@ const Pages: CollectionConfig = {
     {
       name: 'layout',
       type: 'blocks',
-      blocks: [Quote, Copy, Alert, Hero, Content]
+      blocks: [Hero, Content, Ribbon]
     },
     {
       name: 'status',

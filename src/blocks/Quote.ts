@@ -1,17 +1,19 @@
 import { Block } from 'payload/types'
 
 const Quote: Block = {
-  slug: 'quote',
+  slug: 'quote-block',
   // imageURL: 'http://localhost:3000/media/quote.png',
-  imageAltText: 'Quote block',
+  // imageAltText: 'Quote block',
+  labels: {
+    singular: 'Quote',
+    plural: 'Quotes'
+  },
   fields: [
     {
-      name: 'quote',
-      type: 'textarea'
-    },
-    {
-      name: 'author',
-      type: 'text'
+      name: 'testimonial',
+      type: 'relationship',
+      relationTo: 'testimonials',
+      maxDepth: 0
     }
   ]
 }
