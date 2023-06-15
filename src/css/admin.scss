@@ -1,0 +1,13 @@
+.avatar-image {
+  border-radius: 50%;
+}
+
+.graphic-account {
+  .circle1 {
+    fill: var(--theme-elevation-100);
+  }
+
+  .circle2, path {
+    fill: var(--theme-elevation-300);
+  }
+}

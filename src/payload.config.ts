@@ -1,6 +1,9 @@
 import { buildConfig } from 'payload/config'
 import path from 'path'
 
+// custom components
+import UserAvatar from './components/UserAvatar'
+
 // import Examples from './collections/Examples';
 import Categories from './collections/Categories'
 import Files from './collections/Files'
@@ -19,7 +22,9 @@ import Navigation from './globals/Navigation'
 export default buildConfig({
   serverURL: 'http://localhost:3000',
   admin: {
-    user: Users.slug
+    user: Users.slug,
+    avatar: UserAvatar,
+    css: path.resolve(__dirname, 'css/admin.scss')
   },
   collections: [
     Categories,

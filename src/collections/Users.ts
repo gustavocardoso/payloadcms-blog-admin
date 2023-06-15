@@ -5,7 +5,7 @@ import { isAdminOrSelf } from '../access/isAdminOrSelf'
 const Users: CollectionConfig = {
   slug: 'users',
   auth: {
-    depth: 0
+    depth: 1
   },
   admin: {
     group: 'Admin',
@@ -71,6 +71,12 @@ const Users: CollectionConfig = {
         create: isAdminFieldLevel,
         update: isAdminFieldLevel
       }
+    },
+    {
+      name: 'thumbnail',
+      label: 'Profile Image',
+      type: 'upload',
+      relationTo: 'images'
     }
   ]
 }
