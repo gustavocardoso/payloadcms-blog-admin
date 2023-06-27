@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useAuth } from 'payload/components/utilities'
-import { User } from '../types'
 
 const UserAvatar: React.FC = () => {
   const [avatar, setAvatar] = useState<string | null>(null)
@@ -18,7 +16,9 @@ const UserAvatar: React.FC = () => {
   return (
     <div>
       {avatar ? (
-        <img src={avatar} width='50' className='avatar-image' />
+        <div className='avatar-container'>
+          <img src={avatar} width='50' className='avatar-image' />
+        </div>
       ) : (
         <svg
           className='graphic-account'

@@ -95,19 +95,24 @@ const Posts: CollectionConfig = {
       name: 'author',
       type: 'relationship',
       relationTo: 'users',
+      access: {
+        update: () => false
+      },
       maxDepth: 0,
       // defaultValues can use functions to return data to populate the create form and also when making POST requests the server will use the value or function to fill in any undefined fields before validation occurs
-      defaultValue: ({ user }) => user.id,
+      // defaultValue: ({ user }) => user.id,
       admin: {
         position: 'sidebar',
-        readOnly: true
+        readOnly: true,
+        condition: user => Boolean(user?.author)
       }
     },
     {
       name: 'publishedDate',
       type: 'date',
       admin: {
-        position: 'sidebar'
+        position: 'sidebar',
+        condition: data => Boolean(data?.publishedDate)
       }
     },
     {
@@ -119,6 +124,23 @@ const Posts: CollectionConfig = {
         position: 'sidebar'
       }
     }
-  ]
+  ],
+  hooks: {
+    beforeChange: [
+      ({ req, operation, data }) => {
+        if (operation === 'create') {
+          if (req.user) {
+            data.author = req.user.id
+          }
+
+          if (!data.publishedDate) {
+            data.publishedDate = new Date()
+          }
+
+          return data
+        }
+      }
+    ]
+  }
 }
 export default Posts
