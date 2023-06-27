@@ -7,7 +7,7 @@ const Logos: CollectionConfig = {
     staticDir: 'media/images',
     mimeTypes: ['image/*'],
     resizeOptions: {
-      fit: 'contain'
+      fit: 'inside'
     },
     imageSizes: [
       {

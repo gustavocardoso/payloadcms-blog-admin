@@ -1,5 +1,5 @@
-import { buildConfig } from 'payload/config'
 import path from 'path'
+import { buildConfig } from 'payload/config'
 
 // custom components
 import UserAvatar from './components/UserAvatar'
@@ -8,16 +8,16 @@ import UserAvatar from './components/UserAvatar'
 import Categories from './collections/Categories'
 import Files from './collections/Files'
 import Icons from './collections/Icons'
-import Images from './collections/Media'
 import Logos from './collections/Logos'
+import Images from './collections/Media'
 import Pages from './collections/Pages'
 import Posts from './collections/Posts'
 import Testimonials from './collections/Testimonials'
 import Users from './collections/Users'
 
+import Navigation from './globals/Navigation'
 import SiteOptions from './globals/SiteOptions'
 import SocialLinks from './globals/SocialLinks'
-import Navigation from './globals/Navigation'
 
 export default buildConfig({
   serverURL: 'http://localhost:3000',
