@@ -42,6 +42,33 @@ const SiteOptions: GlobalConfig = {
     },
     {
       type: 'group',
+      name: 'Footer',
+      fields: [
+        {
+          type: 'row',
+          fields: [
+            {
+              name: 'copyright',
+              label: 'Copyright',
+              type: 'text'
+            }
+          ]
+        },
+        {
+          type: 'row',
+          fields: [
+            {
+              name: 'footerLogo',
+              label: 'Logo',
+              type: 'upload',
+              relationTo: 'logos'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      type: 'group',
       name: 'Contact',
       fields: [
         {
