@@ -1,4 +1,4 @@
-.avatar-container{
+.avatar-container {
   position: relative;
   width: 60px;
   height: 60px;
@@ -25,7 +25,12 @@
     fill: var(--theme-elevation-100);
   }
 
-  .circle2, path {
+  .circle2,
+  path {
     fill: var(--theme-elevation-300);
   }
+}
+
+.contact-message {
+  height: 300px;
 }

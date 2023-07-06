@@ -11,3 +11,15 @@ export interface User {
   createdAt: string
   updatedAt: string
 }
+
+export interface Contact {
+  id: string
+  firstName: string
+  lastName: string
+  email: string
+  company: string
+  phoneNumber: string
+  message: string
+  createdAt: string
+  updatedAt: string
+}

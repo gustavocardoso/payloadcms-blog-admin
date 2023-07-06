@@ -15,6 +15,7 @@ import Posts from './collections/Posts'
 import Testimonials from './collections/Testimonials'
 import Users from './collections/Users'
 
+import Contacts from './collections/Contacts'
 import Navigation from './globals/Navigation'
 import SiteOptions from './globals/SiteOptions'
 import SocialLinks from './globals/SocialLinks'
@@ -28,6 +29,7 @@ export default buildConfig({
   },
   collections: [
     Categories,
+    Contacts,
     Files,
     Icons,
     Images,
@@ -40,6 +42,20 @@ export default buildConfig({
     // Examples,
   ],
   globals: [Navigation, SocialLinks, SiteOptions],
+  email: {
+    fromName: 'Admin',
+    fromAddress: 'gustavocardoso@gmail.com',
+    transportOptions: {
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false,
+      requireTLS: true,
+      auth: {
+        user: 'gustavocardoso@gmail.com', // like : abc@gmail.com
+        pass: 'hpdjwrgthlqnhcqt' // like : pass@123
+      }
+    }
+  },
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts')
   },
