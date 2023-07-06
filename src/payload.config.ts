@@ -1,3 +1,4 @@
+import env from 'dotenv'
 import path from 'path'
 import { buildConfig } from 'payload/config'
 
@@ -43,16 +44,16 @@ export default buildConfig({
   ],
   globals: [Navigation, SocialLinks, SiteOptions],
   email: {
-    fromName: 'Admin',
-    fromAddress: 'gustavocardoso@gmail.com',
+    fromName: process.env.EMAIL_SMTP_NAME,
+    fromAddress: process.env.EMAIL_SMTP_EMAIL_ADDRESS,
     transportOptions: {
-      host: 'smtp.gmail.com',
-      port: 587,
+      host: process.env.EMAIL_SMTP_HOST,
+      port: process.env.EMAIL_SMTP_PORT,
       secure: false,
       requireTLS: true,
       auth: {
-        user: 'gustavocardoso@gmail.com', // like : abc@gmail.com
-        pass: 'hpdjwrgthlqnhcqt' // like : pass@123
+        user: process.env.EMAIL_SMTP_ACCOUNT,
+        pass: process.env.EMAIL_SMTP_PASSWORD
       }
     }
   },
