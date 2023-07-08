@@ -2,6 +2,9 @@ import { CollectionConfig } from 'payload/types'
 
 const Icons: CollectionConfig = {
   slug: 'icons',
+  access: {
+    read: () => true
+  },
   upload: {
     staticURL: '/media',
     staticDir: 'media/images',

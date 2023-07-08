@@ -10,8 +10,7 @@ const Contacts: CollectionConfig = {
   },
   access: {
     read: () => true,
-    create: () => true,
-    delete: () => true
+    create: () => true
   },
   fields: [
     {

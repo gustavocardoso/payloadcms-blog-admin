@@ -2,6 +2,9 @@ import { CollectionConfig } from 'payload/types'
 
 const Files: CollectionConfig = {
   slug: 'files',
+  access: {
+    read: () => true
+  },
   upload: {
     staticURL: '/files',
     staticDir: 'files',

@@ -1,7 +1,7 @@
 import { CollectionConfig } from 'payload/types'
 
-import Alert from '../blocks/Heading'
 import Copy from '../blocks/Copy'
+import Alert from '../blocks/Heading'
 import Quote from '../blocks/Quote'
 import slug from '../fields/slug'
 
