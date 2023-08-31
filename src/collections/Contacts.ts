@@ -22,7 +22,7 @@ const Contacts: CollectionConfig = {
           type: 'text',
           required: true,
           admin: {
-            readOnly: true
+            // readOnly: true
           }
         },
         {
@@ -31,7 +31,7 @@ const Contacts: CollectionConfig = {
           type: 'text',
           required: true,
           admin: {
-            readOnly: true
+            // readOnly: true
           }
         }
       ]
@@ -45,7 +45,7 @@ const Contacts: CollectionConfig = {
           type: 'text',
           required: true,
           admin: {
-            readOnly: true,
+            // readOnly: true,
             width: '40%'
           }
         },
@@ -55,7 +55,7 @@ const Contacts: CollectionConfig = {
           type: 'text',
           required: true,
           admin: {
-            readOnly: true,
+            // readOnly: true,
             width: '30%'
           }
         },
@@ -65,7 +65,7 @@ const Contacts: CollectionConfig = {
           type: 'text',
           required: true,
           admin: {
-            readOnly: true,
+            // readOnly: true,
             width: '30%'
           }
         }
@@ -77,7 +77,7 @@ const Contacts: CollectionConfig = {
       type: 'textarea',
       required: true,
       admin: {
-        readOnly: true,
+        // readOnly: true,
         className: 'contact-message'
       }
     }
@@ -86,6 +86,7 @@ const Contacts: CollectionConfig = {
     afterChange: [
       ({ req, operation, doc }: { req: PayloadRequest; operation: any; doc: Contact }) => {
         if (operation === 'create') {
+          console.log('will send')
           const { payload } = req
 
           payload.sendEmail({

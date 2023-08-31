@@ -1,6 +1,7 @@
 import env from 'dotenv'
 import path from 'path'
 import { buildConfig } from 'payload/config'
+import { Resend } from 'resend'
 
 // custom components
 import UserAvatar from './components/UserAvatar'
@@ -49,7 +50,7 @@ export default buildConfig({
     transportOptions: {
       host: process.env.EMAIL_SMTP_HOST,
       port: process.env.EMAIL_SMTP_PORT,
-      secure: false,
+      secure: true,
       requireTLS: true,
       auth: {
         user: process.env.EMAIL_SMTP_ACCOUNT,
