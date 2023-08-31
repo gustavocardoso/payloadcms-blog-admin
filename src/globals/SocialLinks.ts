@@ -9,7 +9,7 @@ const SocialLinks: GlobalConfig = {
   fields: [
     {
       type: 'array',
-      name: 'Social',
+      name: 'social',
       fields: [
         {
           type: 'row',
