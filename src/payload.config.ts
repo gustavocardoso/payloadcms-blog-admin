@@ -1,7 +1,14 @@
+import seo from '@payloadcms/plugin-seo'
 import env from 'dotenv'
 import path from 'path'
 import { buildConfig } from 'payload/config'
-import { Resend } from 'resend'
+
+import type {
+  GenerateDescription,
+  GenerateTitle,
+  GenerateURL,
+  PluginConfig
+} from '@payloadcms/plugin-seo/types'
 
 // custom components
 import UserAvatar from './components/UserAvatar'
@@ -23,12 +30,14 @@ import SiteOptions from './globals/SiteOptions'
 import SocialLinks from './globals/SocialLinks'
 
 export default buildConfig({
-  serverURL: 'http://localhost:3000',
+  serverURL: process.env.PAYLOAD_PUBLIC_EXTERNAL_SERVER_URL,
   admin: {
     user: Users.slug,
     avatar: UserAvatar,
     css: path.resolve(__dirname, 'css/admin.scss')
   },
+  cors: process.env.WHITELIST_ORIGINS ? process.env.WHITELIST_ORIGINS.split(',') : [],
+  csrf: process.env.WHITELIST_ORIGINS ? process.env.WHITELIST_ORIGINS.split(',') : [],
   collections: [
     Categories,
     Contacts,
@@ -58,10 +67,29 @@ export default buildConfig({
       }
     }
   },
+  plugins: [
+    seo({
+      collections: ['pages', 'posts'],
+      uploadsCollection: 'images',
+      fields: [
+        {
+          name: 'keywords',
+          type: 'text',
+          label: 'Keywords (separated by comma)'
+        }
+      ],
+      generateTitle: ({ doc }: any) => `${doc.title.value} | Logoipsum.com`,
+      generateDescription: ({ doc }: any) => doc.excerpt.value,
+      generateImage: ({ doc }: any) => doc?.postImage?.value,
+      generateURL: ({ doc, collection }: any) =>
+        `https://logoipsum.com/${collection?.slug}/${doc?.fields?.slug?.value}`
+    })
+  ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts')
   },
   graphQL: {
-    schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql')
+    disable: true
+    // schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql')
   }
 })

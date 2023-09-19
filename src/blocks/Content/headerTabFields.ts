@@ -1,6 +1,6 @@
 import { Field } from 'payload/types'
-import Alert from '../Heading'
 import Copy from '../Copy'
+import Alert from '../Heading'
 import Quote from '../Quote'
 
 const headerTabFields: Function = (): Field[] => [
@@ -56,7 +56,6 @@ const headerTabFields: Function = (): Field[] => [
           width: '50%',
           description: 'Determine the alignment of the block inside the section.',
           condition: (data, siblingData, { user }) => {
-            console.log(siblingData.blockSize)
             if (siblingData.blockSize && siblingData.blockSize !== 'col-span-12') {
               return true
             } else {

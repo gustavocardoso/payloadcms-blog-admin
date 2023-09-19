@@ -5,7 +5,8 @@ import { isAdminOrSelf } from '../access/isAdminOrSelf'
 const Users: CollectionConfig = {
   slug: 'users',
   auth: {
-    depth: 1
+    depth: 1,
+    useAPIKey: true
   },
   admin: {
     group: 'Admin',
@@ -20,7 +21,6 @@ const Users: CollectionConfig = {
     update: isAdminOrSelf,
     delete: isAdmin
   },
-
   fields: [
     {
       type: 'row',

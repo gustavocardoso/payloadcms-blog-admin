@@ -3,8 +3,8 @@ import { Field } from 'payload/types'
 // Blocks
 import Copy from '../Copy'
 import Heading from '../Heading'
-import Image from '../Image'
 import Icons from '../Icons'
+import Image from '../Image'
 import Quote from '../Quote'
 
 const contentTabFields: Function = (): Field[] => [
@@ -21,7 +21,6 @@ const contentTabFields: Function = (): Field[] => [
     ],
     admin: {
       condition: (data, siblingData, { user }) => {
-        console.log(siblingData)
         if (
           siblingData.numberOfColumns !== null &&
           (siblingData.numberOfColumns === 'one-col' ||
@@ -48,7 +47,6 @@ const contentTabFields: Function = (): Field[] => [
     ],
     admin: {
       condition: (data, siblingData, { user }) => {
-        console.log(siblingData)
         if (
           siblingData.numberOfColumns !== null &&
           (siblingData.numberOfColumns === 'two-col' || siblingData.numberOfColumns === 'three-col')
@@ -73,7 +71,6 @@ const contentTabFields: Function = (): Field[] => [
     ],
     admin: {
       condition: (data, siblingData, { user }) => {
-        console.log(siblingData)
         if (siblingData.numberOfColumns !== null && siblingData.numberOfColumns === 'three-col') {
           return true
         } else {

@@ -86,7 +86,6 @@ const Contacts: CollectionConfig = {
     afterChange: [
       ({ req, operation, doc }: { req: PayloadRequest; operation: any; doc: Contact }) => {
         if (operation === 'create') {
-          console.log('will send')
           const { payload } = req
 
           payload.sendEmail({

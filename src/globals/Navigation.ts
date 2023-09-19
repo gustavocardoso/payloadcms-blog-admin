@@ -6,6 +6,9 @@ const Navigation: GlobalConfig = {
   admin: {
     group: 'Theme'
   },
+  // access: {
+  //   read: () => true
+  // },
   fields: [
     {
       name: 'menuItems',

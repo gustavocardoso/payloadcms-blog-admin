@@ -1,5 +1,7 @@
 import { CollectionConfig } from 'payload/types'
 
+import { isAdmin } from '../access/isAdmin'
+import { isAdminOrSelf } from '../access/isAdminOrSelf'
 import Copy from '../blocks/Copy'
 import Alert from '../blocks/Heading'
 import Quote from '../blocks/Quote'
@@ -12,39 +14,31 @@ const Posts: CollectionConfig = {
     useAsTitle: 'title',
     defaultColumns: ['title', 'category', 'publishDate', 'status']
   },
+  versions: true,
   access: {
-    read: () => true
+    create: isAdmin,
+    read: isAdmin,
+    update: isAdminOrSelf,
+    delete: isAdmin
+  },
+  // access: {
+  //   read: () => true
+  // },
+  auth: {
+    useAPIKey: true,
+    disableLocalStrategy: true
   },
   fields: [
-    {
-      name: 'postMeta',
-      type: 'group',
-      fields: [
-        {
-          name: 'title',
-          type: 'text',
-          required: true,
-          minLength: 20,
-          maxLength: 100
-        },
-        {
-          name: 'description',
-          type: 'textarea',
-          required: true,
-          minLength: 40,
-          maxLength: 160
-        },
-        {
-          name: 'keywords',
-          label: 'Keywords',
-          type: 'text'
-        }
-      ]
-    },
     {
       name: 'title',
       type: 'text',
       required: true
+    },
+    {
+      name: 'excerpt',
+      type: 'textarea',
+      minLength: 40,
+      maxLength: 160
     },
     {
       type: 'tabs',

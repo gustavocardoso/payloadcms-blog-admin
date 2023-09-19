@@ -47,7 +47,6 @@ const Icons: Block = {
           ],
           admin: {
             condition: (data, siblingData, { user }) => {
-              console.log(siblingData)
               if (siblingData.style && siblingData.style === 'icon-on-left') {
                 return true
               } else {
@@ -175,7 +174,6 @@ const Icons: Block = {
               relationTo: 'icons',
               admin: {
                 condition: (data, siblingData, { user }) => {
-                  console.log(siblingData)
                   if (siblingData.iconType && siblingData.iconType === 'image') {
                     return true
                   } else {
@@ -189,7 +187,6 @@ const Icons: Block = {
               name: 'iconString',
               admin: {
                 condition: (data, siblingData, { user }) => {
-                  console.log(siblingData)
                   if (siblingData.iconType && siblingData.iconType === 'icon') {
                     return true
                   } else {

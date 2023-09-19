@@ -3,6 +3,7 @@ import { CollectionConfig } from 'payload/types'
 import Content from '../blocks/Content'
 import Hero from '../blocks/Hero'
 import Ribbon from '../blocks/Ribbon'
+import slug from '../fields/slug'
 
 const Pages: CollectionConfig = {
   slug: 'pages',
@@ -19,6 +20,12 @@ const Pages: CollectionConfig = {
       name: 'title',
       type: 'text',
       required: true
+    },
+    {
+      name: 'excerpt',
+      type: 'textarea',
+      minLength: 40,
+      maxLength: 160
     },
     {
       name: 'layout',
@@ -43,34 +50,7 @@ const Pages: CollectionConfig = {
         position: 'sidebar'
       }
     },
-    {
-      name: 'pageMeta',
-      type: 'group',
-      fields: [
-        {
-          name: 'title',
-          type: 'text',
-          required: true,
-          // minLength: 20,
-          maxLength: 100
-        },
-        {
-          name: 'description',
-          type: 'textarea',
-          required: true,
-          // minLength: 40,
-          maxLength: 160
-        },
-        {
-          name: 'keywords',
-          label: 'Keywords',
-          type: 'text'
-        }
-      ],
-      admin: {
-        position: 'sidebar'
-      }
-    }
+    slug()
   ]
 }
 export default Pages
