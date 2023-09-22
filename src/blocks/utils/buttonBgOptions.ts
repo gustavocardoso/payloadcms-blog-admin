@@ -6,23 +6,51 @@ type BackgroundOption = {
 const buttonBgOptions: Function = (): BackgroundOption[] => [
   {
     label: 'Primary',
-    value: 'primary'
+    value: 'button-primary'
   },
   {
     label: 'Secondary',
-    value: 'secondary'
+    value: 'button-secondary'
   },
   {
     label: 'Tertiary',
-    value: 'tertiary'
+    value: 'button-tertiary'
   },
   {
-    label: 'Outline White',
-    value: 'outline-white'
+    label: 'Dark',
+    value: 'button-dark'
   },
   {
-    label: 'Outline Black',
-    value: 'outline-black'
+    label: 'Light',
+    value: 'button-light'
+  },
+  {
+    label: 'Highlight',
+    value: 'button-highlight'
+  },
+  {
+    label: 'Outline Light',
+    value: 'button-outline-light'
+  },
+  {
+    label: 'Outline Dark',
+    value: 'button-outline-dark'
+  },
+  {
+    label: 'Outline Highlight',
+    value: 'button-outline-highlight'
+  },
+  {
+    label: 'Outline Primary',
+    value: 'button-outline-primary'
+  },
+  {
+    label: 'Outline Secondary',
+    value: 'button-outline-secondary'
+  },
+  {
+    label: 'Outline Tertiary',
+    value: 'button-outline-tertiary'
   }
 ]
 

@@ -12,13 +12,39 @@ const Hero: Block = {
           label: 'Content',
           fields: [
             {
-              name: 'title',
-              type: 'text',
-              label: 'Title'
+              type: 'row',
+              fields: [
+                {
+                  name: 'type',
+                  label: 'Type',
+                  type: 'select',
+                  options: [
+                    {
+                      label: 'Centered',
+                      value: 'centered'
+                    },
+                    {
+                      label: 'Two Columns',
+                      value: 'two-columns'
+                    }
+                  ],
+                  admin: {
+                    width: '20%'
+                  }
+                }
+              ]
             },
             {
               type: 'row',
               fields: [
+                {
+                  name: 'title',
+                  type: 'text',
+                  label: 'Title',
+                  admin: {
+                    width: '60%'
+                  }
+                },
                 {
                   name: 'titleTag',
                   label: 'Title Tag',
@@ -32,7 +58,10 @@ const Hero: Block = {
                       label: 'H2',
                       value: 'h2'
                     }
-                  ]
+                  ],
+                  admin: {
+                    width: '20%'
+                  }
                 },
                 {
                   name: 'alignment',
@@ -51,18 +80,17 @@ const Hero: Block = {
                       label: 'Right',
                       value: 'right'
                     }
-                  ]
+                  ],
+                  admin: {
+                    width: '20%'
+                  }
                 }
               ]
             },
             {
               name: 'description',
               label: 'Description',
-              type: 'richText',
-              admin: {
-                elements: ['h2', 'h3', 'ul'],
-                leaves: ['bold', 'italic', 'strikethrough', 'underline']
-              }
+              type: 'textarea'
             },
             {
               name: 'buttons',
@@ -96,6 +124,38 @@ const Hero: Block = {
               name: 'media',
               type: 'upload',
               relationTo: 'images'
+            },
+            {
+              type: 'group',
+              name: 'effects',
+              label: 'Effects on Hover',
+              fields: [
+                {
+                  type: 'row',
+                  fields: [
+                    {
+                      name: 'rotate',
+                      type: 'checkbox',
+                      defaultValue: false
+                    },
+                    {
+                      name: 'scale',
+                      type: 'checkbox',
+                      defaultValue: false
+                    },
+                    {
+                      name: 'shadow',
+                      type: 'checkbox',
+                      defaultValue: false
+                    },
+                    {
+                      name: 'grayscale',
+                      type: 'checkbox',
+                      defaultValue: false
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
