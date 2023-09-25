@@ -9,7 +9,7 @@ const Hero: Block = {
       type: 'tabs',
       tabs: [
         {
-          label: 'Content',
+          label: 'Options',
           fields: [
             {
               type: 'row',
@@ -28,12 +28,26 @@ const Hero: Block = {
                       value: 'two-columns'
                     }
                   ],
+                  defaultValue: 'two-columns',
                   admin: {
-                    width: '20%'
+                    width: '40%'
+                  }
+                },
+                {
+                  name: 'anchor',
+                  label: 'Anchor',
+                  type: 'text',
+                  admin: {
+                    width: '60%'
                   }
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          label: 'Content',
+          fields: [
             {
               type: 'row',
               fields: [
@@ -82,7 +96,15 @@ const Hero: Block = {
                     }
                   ],
                   admin: {
-                    width: '20%'
+                    width: '20%',
+                    condition: (data, siblingData, { user }) => {
+                      console.log(siblingData.type)
+                      if (siblingData.type === 'two-columns') {
+                        return true
+                      } else {
+                        return false
+                      }
+                    }
                   }
                 }
               ]
@@ -180,24 +202,67 @@ const Hero: Block = {
                   }
                 }
               }
-            }
-          ]
-        },
-        {
-          label: 'Options',
-          fields: [
+            },
             {
               type: 'row',
               fields: [
                 {
-                  name: 'anchor',
-                  label: 'Anchor',
-                  type: 'text'
+                  name: 'backgroundOpacity',
+                  type: 'select',
+                  options: [
+                    {
+                      label: 'None',
+                      value: 'none'
+                    },
+                    {
+                      label: '20%',
+                      value: '20'
+                    },
+                    {
+                      label: '30%',
+                      value: '30'
+                    },
+                    {
+                      label: '50%',
+                      value: '50'
+                    }
+                  ],
+                  defaultValue: 'none',
+                  admin: {
+                    width: '50%',
+                    condition: (data, siblingData, { user }) => {
+                      if (siblingData.background === 'image') {
+                        return true
+                      } else {
+                        return false
+                      }
+                    }
+                  }
                 },
                 {
-                  name: 'cssClasses',
-                  label: 'CSS Classes',
-                  type: 'text'
+                  name: 'backgroundTextColor',
+                  type: 'select',
+                  options: [
+                    {
+                      label: 'Light',
+                      value: 'light'
+                    },
+                    {
+                      label: 'Dark',
+                      value: 'dark'
+                    }
+                  ],
+                  defaultValue: 'light',
+                  admin: {
+                    width: '50%',
+                    condition: (data, siblingData, { user }) => {
+                      if (siblingData.background === 'image') {
+                        return true
+                      } else {
+                        return false
+                      }
+                    }
+                  }
                 }
               ]
             }
