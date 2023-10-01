@@ -29,6 +29,7 @@ const headerTabFields: Function = (): Field[] => [
             value: 'col-span-6'
           }
         ],
+        defaultValue: 'col-span-10',
         admin: {
           width: '50%',
           description: 'Determine the width of the Header section.'
@@ -52,6 +53,7 @@ const headerTabFields: Function = (): Field[] => [
             value: 'right'
           }
         ],
+        defaultValue: 'center',
         admin: {
           width: '50%',
           description: 'Determine the alignment of the block inside the section.',
@@ -91,6 +93,7 @@ const headerTabFields: Function = (): Field[] => [
             value: 'h2'
           }
         ],
+        defaultValue: 'h2',
         admin: {
           width: '30%'
         }
@@ -121,6 +124,7 @@ const headerTabFields: Function = (): Field[] => [
             value: 'text-dark'
           }
         ],
+        defaultValue: 'text-dark',
         admin: {
           width: '30%'
         }
@@ -156,6 +160,7 @@ const headerTabFields: Function = (): Field[] => [
             value: 'h3'
           }
         ],
+        defaultValue: 'h3',
         admin: {
           width: '30%'
         }
@@ -186,6 +191,7 @@ const headerTabFields: Function = (): Field[] => [
             value: 'text-dark'
           }
         ],
+        defaultValue: 'text-dark',
         admin: {
           width: '30%'
         }
@@ -207,6 +213,7 @@ const headerTabFields: Function = (): Field[] => [
                 value: 'below'
               }
             ],
+            defaultValue: 'below',
             admin: {
               width: '30%'
             }
@@ -229,6 +236,7 @@ const headerTabFields: Function = (): Field[] => [
                 value: 'right'
               }
             ],
+            defaultValue: 'center',
             admin: {
               width: '30%'
             }

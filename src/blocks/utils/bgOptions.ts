@@ -29,6 +29,10 @@ const backgroundOptions: Function = (): BackgroundOption[] => [
     value: 'dark'
   },
   {
+    label: 'Darker',
+    value: 'darker'
+  },
+  {
     label: 'Image',
     value: 'image'
   }

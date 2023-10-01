@@ -30,7 +30,34 @@ const Hero: Block = {
                   ],
                   defaultValue: 'two-columns',
                   admin: {
-                    width: '40%'
+                    width: '30%'
+                  }
+                },
+                {
+                  type: 'select',
+                  name: 'padding',
+                  label: 'Vertical Padding',
+                  options: [
+                    {
+                      label: 'Small',
+                      value: 'py-8'
+                    },
+                    {
+                      label: 'Regular',
+                      value: 'py-16'
+                    },
+                    {
+                      label: 'Large',
+                      value: 'py-32'
+                    },
+                    {
+                      label: 'Extra large',
+                      value: 'py-64'
+                    }
+                  ],
+                  defaultValue: 'py-16',
+                  admin: {
+                    width: '30%'
                   }
                 },
                 {
@@ -38,7 +65,7 @@ const Hero: Block = {
                   label: 'Anchor',
                   type: 'text',
                   admin: {
-                    width: '60%'
+                    width: '40%'
                   }
                 }
               ]
@@ -98,7 +125,6 @@ const Hero: Block = {
                   admin: {
                     width: '20%',
                     condition: (data, siblingData, { user }) => {
-                      console.log(siblingData.type)
                       if (siblingData.type === 'two-columns') {
                         return true
                       } else {

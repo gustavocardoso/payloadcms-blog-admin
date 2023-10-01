@@ -17,7 +17,8 @@ const styleTabFields: Function = (): Field[] => [
             label: 'Container',
             value: 'container'
           }
-        ]
+        ],
+        defaultValue: 'container'
       },
       {
         name: 'blockPadding',
@@ -26,21 +27,22 @@ const styleTabFields: Function = (): Field[] => [
         options: [
           {
             label: 'Padding',
-            value: 'section-padding'
+            value: 'py-28'
           },
           {
             label: 'Padding Top',
-            value: 'section-padding-top'
+            value: 'pt-28 pb-0'
           },
           {
             label: 'Padding Bottom',
-            value: 'section-padding-bottom'
+            value: 'pt-0 pb-28'
           },
           {
             label: 'No Padding',
-            value: 'section-no-padding'
+            value: 'py-0'
           }
-        ]
+        ],
+        defaultValue: 'py-28'
       },
       {
         name: 'numberOfColumns',
@@ -54,12 +56,13 @@ const styleTabFields: Function = (): Field[] => [
           {
             label: '2 Columns',
             value: 'two-col'
-          },
-          {
-            label: '3 Columns',
-            value: 'three-col'
           }
-        ]
+          // {
+          //   label: '3 Columns',
+          //   value: 'three-col'
+          // }
+        ],
+        defaultValue: 'one-col'
       }
     ]
   },
@@ -87,7 +90,8 @@ const styleTabFields: Function = (): Field[] => [
             label: 'Half (6 column)',
             value: 'col-span-6'
           }
-        ]
+        ],
+        defaultValue: 'col-span-12'
       },
       {
         name: 'desktopContainerAlignment',
@@ -107,6 +111,7 @@ const styleTabFields: Function = (): Field[] => [
             value: 'right'
           }
         ],
+        defaultValue: 'center',
         admin: {
           condition: (data, siblingData, { user }) => {
             if (
@@ -133,7 +138,8 @@ const styleTabFields: Function = (): Field[] => [
             label: 'Center',
             value: 'center'
           }
-        ]
+        ],
+        defaultValue: 'top'
       }
     ]
   }
