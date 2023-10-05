@@ -7,37 +7,28 @@ const Images: CollectionConfig = {
   },
   upload: {
     staticURL: '/media',
-    staticDir: 'media/images',
-    resizeOptions: {
-      fit: 'contain'
-    },
+    staticDir: 'media',
     imageSizes: [
       {
         name: 'thumbnail',
-        width: undefined,
-        height: 169,
+        width: 400,
+        height: 300,
         position: 'centre'
       },
       {
         name: 'card',
-        width: 600,
-        height: 338,
+        width: 768,
+        height: 1024,
         position: 'centre'
       },
       {
-        name: 'hero',
-        width: 760,
-        height: 499,
-        position: 'centre'
-      },
-      {
-        name: 'featured',
-        width: 1000,
+        name: 'tablet',
+        width: 1024,
         // By specifying `undefined` or leaving a height undefined,
         // the image will be sized to a certain width,
         // but it will retain its original aspect ratio
         // and calculate a height automatically.
-        height: 500,
+        height: undefined,
         position: 'centre'
       }
     ],

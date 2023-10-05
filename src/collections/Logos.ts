@@ -46,7 +46,8 @@ const Logos: CollectionConfig = {
     }
   ],
   admin: {
-    group: 'Media'
+    group: 'Media',
+    defaultColumns: ['filename', 'title', 'id']
   }
 }
 
