@@ -17,8 +17,8 @@ const Images: CollectionConfig = {
       },
       {
         name: 'card',
-        width: 768,
-        height: 1024,
+        width: 1024,
+        height: 768,
         position: 'centre'
       },
       {

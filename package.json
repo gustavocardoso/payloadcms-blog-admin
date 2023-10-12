@@ -18,7 +18,8 @@
     "@payloadcms/plugin-seo": "^1.0.14-canary.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "payload": "^1.15.5"
+    "payload": "^1.15.5",
+    "payload-webp": "^1.1.6"
   },
   "devDependencies": {
     "@types/express": "^4.17.9",
@@ -27,5 +28,8 @@
     "nodemon": "^2.0.6",
     "ts-node": "^9.1.1",
     "typescript": "^4.8.4"
+  },
+  "resolutions": {
+    "sharp": "latest"
   }
 }

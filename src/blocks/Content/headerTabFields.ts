@@ -8,7 +8,7 @@ const headerTabFields: Function = (): Field[] => [
     type: 'row',
     fields: [
       {
-        name: 'blockSize',
+        name: 'headerBlockSize',
         type: 'select',
         label: 'Block Size',
         options: [
@@ -36,7 +36,7 @@ const headerTabFields: Function = (): Field[] => [
         }
       },
       {
-        name: 'blockAlignment',
+        name: 'headerBlockAlignment',
         type: 'select',
         label: 'Block Alignment',
         options: [
@@ -56,9 +56,9 @@ const headerTabFields: Function = (): Field[] => [
         defaultValue: 'center',
         admin: {
           width: '50%',
-          description: 'Determine the alignment of the block inside the section.',
+          description: 'Determine the alignment of the header block inside the section.',
           condition: (data, siblingData, { user }) => {
-            if (siblingData.blockSize && siblingData.blockSize !== 'col-span-12') {
+            if (siblingData.headerBlockSize && siblingData.headerBlockSize !== 'col-span-12') {
               return true
             } else {
               return false
@@ -105,26 +105,30 @@ const headerTabFields: Function = (): Field[] => [
         options: [
           {
             label: 'Primary',
-            value: 'text-primary'
+            value: 'primary'
           },
           {
             label: 'Secondary',
-            value: 'text-secondary'
+            value: 'secondary'
           },
           {
             label: 'Tertiary',
-            value: 'text-tertiary'
+            value: 'tertiary'
           },
           {
             label: 'Light',
-            value: 'text-light'
+            value: 'light'
+          },
+          {
+            label: 'Highlight',
+            value: 'highlight'
           },
           {
             label: 'Dark',
-            value: 'text-dark'
+            value: 'dark'
           }
         ],
-        defaultValue: 'text-dark',
+        defaultValue: 'dark',
         admin: {
           width: '30%'
         }
@@ -172,23 +176,27 @@ const headerTabFields: Function = (): Field[] => [
         options: [
           {
             label: 'Primary',
-            value: 'text-primary'
+            value: 'primary'
           },
           {
             label: 'Secondary',
-            value: 'text-secondary'
+            value: 'secondary'
           },
           {
             label: 'Tertiary',
-            value: 'text-tertiary'
+            value: 'tertiary'
           },
           {
             label: 'Light',
-            value: 'text-light'
+            value: 'light'
+          },
+          {
+            label: 'Highlight',
+            value: 'highlight'
           },
           {
             label: 'Dark',
-            value: 'text-dark'
+            value: 'dark'
           }
         ],
         defaultValue: 'text-dark',

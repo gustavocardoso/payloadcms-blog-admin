@@ -1,6 +1,7 @@
 import seo from '@payloadcms/plugin-seo'
 import env from 'dotenv'
 import path from 'path'
+import webp, { defaultResizeFactory } from 'payload-webp'
 import { buildConfig } from 'payload/config'
 
 import type {
@@ -83,7 +84,8 @@ export default buildConfig({
       generateImage: ({ doc }: any) => doc?.postImage?.value,
       generateURL: ({ doc, collection }: any) =>
         `https://logoipsum.com/${collection?.slug}/${doc?.fields?.slug?.value}`
-    })
+    }),
+    webp()
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts')

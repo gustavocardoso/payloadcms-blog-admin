@@ -11,15 +11,20 @@ const Heading: Block = {
       type: 'row',
       fields: [
         {
-          name: 'text',
+          name: 'content',
           label: 'Text',
           type: 'text',
           admin: {
-            width: '40%'
+            width: '50%'
           }
-        },
+        }
+      ]
+    },
+    {
+      type: 'row',
+      fields: [
         {
-          name: 'size',
+          name: 'tag',
           type: 'select',
           options: [
             {
@@ -31,20 +36,20 @@ const Heading: Block = {
               label: 'H2'
             },
             {
-              value: 'H3',
-              label: 'h3'
+              value: 'h3',
+              label: 'H3'
             },
             {
-              value: 'H4',
-              label: 'h4'
+              value: 'h4',
+              label: 'H4'
             },
             {
-              value: 'H5',
-              label: 'h5'
+              value: 'h5',
+              label: 'H5'
             },
             {
-              value: 'H6',
-              label: 'h6'
+              value: 'h6',
+              label: 'H6'
             }
           ],
           admin: {
@@ -73,11 +78,32 @@ const Heading: Block = {
           }
         },
         {
+          name: 'textStyle',
+          type: 'select',
+          options: [
+            {
+              value: 'none',
+              label: 'Regular'
+            },
+            {
+              value: 'lowercase',
+              label: 'Lowercase'
+            },
+            {
+              value: 'uppercase',
+              label: 'Uppercase'
+            }
+          ],
+          admin: {
+            width: '20%'
+          }
+        },
+        {
           name: 'class',
           label: 'Class',
           type: 'text',
           admin: {
-            width: '20%'
+            width: '40%'
           }
         }
       ]
