@@ -6,13 +6,29 @@ const Images: CollectionConfig = {
     read: () => true
   },
   upload: {
-    staticURL: '/media',
-    staticDir: 'media',
+    staticURL: '/media/images',
+    staticDir: 'media/images',
     imageSizes: [
       {
-        name: 'thumbnail',
-        width: 400,
-        height: 300,
+        name: 'background',
+        width: 1920,
+        // By specifying `undefined` or leaving a height undefined,
+        // the image will be sized to a certain width,
+        // but it will retain its original aspect ratio
+        // and calculate a height automatically.
+        height: 1080,
+        position: 'centre'
+      },
+      {
+        name: 'blog',
+        width: 1200,
+        height: 630,
+        position: 'centre'
+      },
+      {
+        name: 'hero',
+        width: 1280,
+        height: 720,
         position: 'centre'
       },
       {
@@ -22,13 +38,9 @@ const Images: CollectionConfig = {
         position: 'centre'
       },
       {
-        name: 'tablet',
-        width: 1024,
-        // By specifying `undefined` or leaving a height undefined,
-        // the image will be sized to a certain width,
-        // but it will retain its original aspect ratio
-        // and calculate a height automatically.
-        height: undefined,
+        name: 'thumbnail',
+        width: 400,
+        height: 300,
         position: 'centre'
       }
     ],

@@ -1,4 +1,7 @@
+import { webpackBundler } from '@payloadcms/bundler-webpack'
+import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import seo from '@payloadcms/plugin-seo'
+import { slateEditor } from '@payloadcms/richtext-slate'
 import env from 'dotenv'
 import path from 'path'
 import webp, { defaultResizeFactory } from 'payload-webp'
@@ -35,6 +38,7 @@ export default buildConfig({
   admin: {
     user: Users.slug,
     avatar: UserAvatar,
+    bundler: webpackBundler(),
     css: path.resolve(__dirname, 'css/admin.scss')
   },
   cors: process.env.WHITELIST_ORIGINS ? process.env.WHITELIST_ORIGINS.split(',') : [],
@@ -50,8 +54,6 @@ export default buildConfig({
     Posts,
     Testimonials,
     Users
-    // Add Collections here
-    // Examples,
   ],
   globals: [Navigation, SocialLinks, SiteOptions],
   email: {
@@ -68,6 +70,7 @@ export default buildConfig({
       }
     }
   },
+  editor: slateEditor({}),
   plugins: [
     seo({
       collections: ['pages', 'posts'],
@@ -93,5 +96,8 @@ export default buildConfig({
   graphQL: {
     disable: true
     // schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql')
-  }
+  },
+  db: mongooseAdapter({
+    url: process.env.MONGODB_URI
+  })
 })

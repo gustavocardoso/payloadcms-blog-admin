@@ -1,3 +1,4 @@
+import { slateEditor } from '@payloadcms/richtext-slate'
 import { Field } from 'payload/types'
 import Copy from '../Copy'
 import Alert from '../Heading'
@@ -255,10 +256,13 @@ const headerTabFields: Function = (): Field[] => [
         name: 'content',
         label: 'Content',
         type: 'richText',
-        admin: {
-          elements: ['ul'],
-          leaves: ['bold', 'italic', 'strikethrough', 'underline']
-        }
+        editor: slateEditor({
+          // Move the admin property as shown below
+          admin: {
+            elements: ['ul', 'link'],
+            leaves: ['bold', 'italic', 'strikethrough', 'underline']
+          }
+        })
       }
     ]
   }
