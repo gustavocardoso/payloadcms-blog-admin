@@ -14,7 +14,7 @@ const contentTabFields: Function = (): Field[] => [
     name: 'columnOne',
     fields: [
       {
-        name: 'layout',
+        name: 'columnOneLayout',
         type: 'blocks',
         blocks: [Quote, Copy, Heading, Image, Icons]
       }
@@ -40,7 +40,7 @@ const contentTabFields: Function = (): Field[] => [
     name: 'columnTwo',
     fields: [
       {
-        name: 'layout',
+        name: 'columnTwoLayout',
         type: 'blocks',
         blocks: [Quote, Copy, Heading, Image, Icons]
       }
@@ -57,28 +57,28 @@ const contentTabFields: Function = (): Field[] => [
         }
       }
     }
-  },
-  {
-    type: 'group',
-    label: 'Column 3',
-    name: 'columnThree',
-    fields: [
-      {
-        name: 'layout',
-        type: 'blocks',
-        blocks: [Quote, Copy, Heading, Image, Icons]
-      }
-    ],
-    admin: {
-      condition: (data, siblingData, { user }) => {
-        if (siblingData.numberOfColumns !== null && siblingData.numberOfColumns === 'three-col') {
-          return true
-        } else {
-          return false
-        }
-      }
-    }
   }
+  // {
+  //   type: 'group',
+  //   label: 'Column 3',
+  //   name: 'columnThree',
+  //   fields: [
+  //     {
+  //       name: 'columnThreeLayout',
+  //       type: 'blocks',
+  //       blocks: [Quote, Copy, Heading, Image, Icons]
+  //     }
+  //   ],
+  //   admin: {
+  //     condition: (data, siblingData, { user }) => {
+  //       if (siblingData.numberOfColumns !== null && siblingData.numberOfColumns === 'three-col') {
+  //         return true
+  //       } else {
+  //         return false
+  //       }
+  //     }
+  //   }
+  // }
 ]
 
 export default contentTabFields()

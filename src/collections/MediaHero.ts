@@ -1,7 +1,7 @@
 import { CollectionConfig } from 'payload/types'
 
-const Images: CollectionConfig = {
-  slug: 'images',
+const HeroImages: CollectionConfig = {
+  slug: 'hero-images',
   access: {
     read: () => true
   },
@@ -77,4 +77,4 @@ const Images: CollectionConfig = {
   }
 }
 
-export default Images
+export default HeroImages

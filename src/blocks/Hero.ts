@@ -171,37 +171,30 @@ const Hero: Block = {
             {
               name: 'media',
               type: 'upload',
-              relationTo: 'images'
+              relationTo: 'hero-images'
             },
             {
-              type: 'group',
-              name: 'effects',
-              label: 'Effects on Hover',
+              type: 'row',
               fields: [
                 {
-                  type: 'row',
-                  fields: [
-                    {
-                      name: 'rotate',
-                      type: 'checkbox',
-                      defaultValue: false
-                    },
-                    {
-                      name: 'scale',
-                      type: 'checkbox',
-                      defaultValue: false
-                    },
-                    {
-                      name: 'shadow',
-                      type: 'checkbox',
-                      defaultValue: false
-                    },
-                    {
-                      name: 'grayscale',
-                      type: 'checkbox',
-                      defaultValue: false
-                    }
-                  ]
+                  name: 'rotate',
+                  type: 'checkbox',
+                  defaultValue: false
+                },
+                {
+                  name: 'scale',
+                  type: 'checkbox',
+                  defaultValue: false
+                },
+                {
+                  name: 'shadow',
+                  type: 'checkbox',
+                  defaultValue: false
+                },
+                {
+                  name: 'grayscale',
+                  type: 'checkbox',
+                  defaultValue: false
                 }
               ]
             }

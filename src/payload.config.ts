@@ -23,6 +23,7 @@ import Files from './collections/Files'
 import Icons from './collections/Icons'
 import Logos from './collections/Logos'
 import Images from './collections/Media'
+import HeroImages from './collections/MediaHero'
 import Pages from './collections/Pages'
 import Posts from './collections/Posts'
 import Testimonials from './collections/Testimonials'
@@ -49,6 +50,7 @@ export default buildConfig({
     Files,
     Icons,
     Images,
+    HeroImages,
     Logos,
     Pages,
     Posts,

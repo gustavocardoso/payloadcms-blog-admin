@@ -95,7 +95,16 @@ const Icons: Block = {
               label: 'Right',
               value: 'right'
             }
-          ]
+          ],
+          admin: {
+            condition: (data, siblingData, { user }) => {
+              if (siblingData.style && siblingData.style !== 'icon-on-left') {
+                return true
+              } else {
+                return false
+              }
+            }
+          }
         }
       ]
     },

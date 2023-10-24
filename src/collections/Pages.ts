@@ -28,7 +28,7 @@ const Pages: CollectionConfig = {
       maxLength: 160
     },
     {
-      name: 'layout',
+      name: 'pageLayout',
       type: 'blocks',
       blocks: [Hero, Content, Ribbon]
     },

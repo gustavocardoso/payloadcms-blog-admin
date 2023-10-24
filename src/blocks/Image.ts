@@ -25,8 +25,8 @@ const Image: Block = {
           }
         },
         {
-          name: 'setting',
-          label: 'Setting',
+          name: 'settings',
+          label: 'Settings',
           type: 'select',
           options: [
             {

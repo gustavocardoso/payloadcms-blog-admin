@@ -1,8 +1,5 @@
 import { slateEditor } from '@payloadcms/richtext-slate'
 import { Field } from 'payload/types'
-import Copy from '../Copy'
-import Alert from '../Heading'
-import Quote from '../Quote'
 
 const headerTabFields: Function = (): Field[] => [
   {
@@ -32,7 +29,7 @@ const headerTabFields: Function = (): Field[] => [
         ],
         defaultValue: 'col-span-10',
         admin: {
-          width: '50%',
+          width: '40%',
           description: 'Determine the width of the Header section.'
         }
       },
@@ -56,7 +53,7 @@ const headerTabFields: Function = (): Field[] => [
         ],
         defaultValue: 'center',
         admin: {
-          width: '50%',
+          width: '40%',
           description: 'Determine the alignment of the header block inside the section.',
           condition: (data, siblingData, { user }) => {
             if (siblingData.headerBlockSize && siblingData.headerBlockSize !== 'col-span-12') {
@@ -96,7 +93,7 @@ const headerTabFields: Function = (): Field[] => [
         ],
         defaultValue: 'h2',
         admin: {
-          width: '30%'
+          width: '20%'
         }
       },
       {
@@ -131,7 +128,7 @@ const headerTabFields: Function = (): Field[] => [
         ],
         defaultValue: 'dark',
         admin: {
-          width: '30%'
+          width: '20%'
         }
       }
     ]
@@ -167,7 +164,7 @@ const headerTabFields: Function = (): Field[] => [
         ],
         defaultValue: 'h3',
         admin: {
-          width: '30%'
+          width: '20%'
         }
       },
       {
@@ -200,9 +197,9 @@ const headerTabFields: Function = (): Field[] => [
             value: 'dark'
           }
         ],
-        defaultValue: 'text-dark',
+        defaultValue: 'dark',
         admin: {
-          width: '30%'
+          width: '20%'
         }
       },
       {

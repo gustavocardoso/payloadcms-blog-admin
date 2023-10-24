@@ -24,7 +24,8 @@ const Files: CollectionConfig = {
   ],
   admin: {
     group: 'Media',
-    useAsTitle: 'title'
+    useAsTitle: 'title',
+    defaultColumns: ['filename', 'title', 'updatedAt']
   }
 }
 

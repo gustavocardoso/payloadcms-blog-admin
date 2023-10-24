@@ -47,7 +47,7 @@ const Icons: CollectionConfig = {
   ],
   admin: {
     group: 'Media',
-    defaultColumns: ['filename', 'title', 'id']
+    defaultColumns: ['filename', 'title', 'updatedAt']
   }
 }
 
