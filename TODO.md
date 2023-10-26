@@ -1,0 +1,3 @@
+- Fix icons block layout
+- Add fontawesome option
+- Add random quote option

@@ -13,7 +13,7 @@ const Quote: Block = {
       name: 'testimonial',
       type: 'relationship',
       relationTo: 'testimonials',
-      maxDepth: 0
+      maxDepth: 2
     }
   ]
 }

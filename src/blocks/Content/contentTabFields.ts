@@ -6,6 +6,7 @@ import Heading from '../Heading'
 import Icons from '../Icons'
 import Image from '../Image'
 import Quote from '../Quote'
+import Video from '../Video'
 
 const contentTabFields: Function = (): Field[] => [
   {
@@ -16,7 +17,7 @@ const contentTabFields: Function = (): Field[] => [
       {
         name: 'columnOneLayout',
         type: 'blocks',
-        blocks: [Quote, Copy, Heading, Image, Icons]
+        blocks: [Copy, Heading, Icons, Image, Quote, Video]
       }
     ],
     admin: {

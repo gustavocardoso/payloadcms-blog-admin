@@ -10,6 +10,7 @@ const Testimonials: CollectionConfig = {
     useAsTitle: 'title',
     defaultColumns: ['title', 'author', 'company']
   },
+  timestamps: false,
   fields: [
     {
       name: 'title',
