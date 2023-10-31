@@ -13,6 +13,7 @@
   object-fit: cover;
   filter: grayscale(100%);
   transition: all 0.25s linear;
+  border-radius: 100%;
 
   &:hover {
     filter: grayscale(0);

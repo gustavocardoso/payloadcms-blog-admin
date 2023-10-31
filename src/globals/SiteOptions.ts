@@ -29,12 +29,30 @@ const SiteOptions: GlobalConfig = {
               admin: {
                 width: '50%'
               }
-            },
+            }
+          ]
+        },
+        {
+          type: 'row',
+          fields: [
             {
               name: 'logo',
               label: 'Logo',
               type: 'upload',
               relationTo: 'logos'
+            }
+          ]
+        },
+        {
+          type: 'row',
+          fields: [
+            {
+              type: 'checkbox',
+              name: 'fontAwesome',
+              label: 'Enable Font Awesome?',
+              admin: {
+                width: '40%'
+              }
             }
           ]
         }

@@ -1,4 +1,5 @@
 import { Block } from 'payload/types'
+import link from '../fields/link'
 import backgroundOptions from './utils/bgOptions'
 import buttonBgOptions from './utils/buttonBgOptions'
 
@@ -146,16 +147,7 @@ const Hero: Block = {
               label: 'Buttons',
               maxRows: 2,
               fields: [
-                {
-                  name: 'text',
-                  label: 'Text',
-                  type: 'text'
-                },
-                {
-                  name: 'link',
-                  label: 'Link',
-                  type: 'text'
-                },
+                link,
                 {
                   name: 'style',
                   type: 'select',

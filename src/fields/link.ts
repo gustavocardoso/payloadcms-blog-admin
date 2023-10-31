@@ -40,6 +40,7 @@ const link: Field = {
       relationTo: 'pages',
       required: true,
       unique: true,
+      maxDepth: 1,
       admin: {
         description: 'Page to link to',
         condition: (_, siblingData) => siblingData?.type === 'page'

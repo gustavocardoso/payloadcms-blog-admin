@@ -52,6 +52,7 @@ const Heading: Block = {
               label: 'H6'
             }
           ],
+          defaultValue: 'h2',
           admin: {
             width: '20%'
           }
@@ -73,6 +74,7 @@ const Heading: Block = {
               label: 'Right'
             }
           ],
+          defaultValue: 'left',
           admin: {
             width: '20%'
           }
@@ -94,6 +96,7 @@ const Heading: Block = {
               label: 'Uppercase'
             }
           ],
+          defaultValue: 'none',
           admin: {
             width: '20%'
           }
