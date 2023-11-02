@@ -39,19 +39,60 @@ const SiteOptions: GlobalConfig = {
               name: 'logo',
               label: 'Logo',
               type: 'upload',
-              relationTo: 'logos'
-            }
-          ]
-        },
-        {
-          type: 'row',
-          fields: [
-            {
-              type: 'checkbox',
-              name: 'fontAwesome',
-              label: 'Enable Font Awesome?',
+              relationTo: 'logos',
               admin: {
                 width: '40%'
+              }
+            },
+            {
+              type: 'select',
+              name: 'fontAwesome',
+              label: 'Enable Font Awesome?',
+              options: [
+                {
+                  label: 'Yes',
+                  value: 'enable'
+                },
+                {
+                  label: 'No',
+                  value: 'disable'
+                }
+              ],
+              defaultValue: 'disable',
+              admin: {
+                width: '20%'
+              }
+            },
+            {
+              type: 'select',
+              name: 'fontAwesomeLink',
+              label: 'Select Version',
+              options: [
+                {
+                  label: '6.4.2 - All',
+                  value: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'
+                },
+                {
+                  label: '6.4.2 - Brands',
+                  value:
+                    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css'
+                },
+                {
+                  label: '6.4.2 - Regular',
+                  value:
+                    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/regular.min.css'
+                },
+                {
+                  label: '6.4.2 - Solid',
+                  value:
+                    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css'
+                }
+              ],
+              admin: {
+                width: '20%',
+                condition: (data, sibilingData, _) => {
+                  return sibilingData.fontAwesome === 'enable'
+                }
               }
             }
           ]
