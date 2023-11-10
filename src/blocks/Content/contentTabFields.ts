@@ -1,6 +1,7 @@
 import { Field } from 'payload/types'
 
 // Blocks
+import Button from '../Button'
 import Copy from '../Copy'
 import Heading from '../Heading'
 import Icons from '../Icons'
@@ -17,7 +18,7 @@ const contentTabFields: Function = (): Field[] => [
       {
         name: 'columnOneLayout',
         type: 'blocks',
-        blocks: [Copy, Heading, Icons, Image, Quote, Video]
+        blocks: [Button, Copy, Heading, Icons, Image, Quote, Video]
       }
     ],
     admin: {
@@ -43,7 +44,7 @@ const contentTabFields: Function = (): Field[] => [
       {
         name: 'columnTwoLayout',
         type: 'blocks',
-        blocks: [Quote, Copy, Heading, Image, Icons]
+        blocks: [Button, Copy, Heading, Icons, Image, Quote, Video]
       }
     ],
     admin: {

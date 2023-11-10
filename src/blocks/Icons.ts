@@ -195,6 +195,8 @@ const Icons: Block = {
               type: 'text',
               name: 'iconString',
               admin: {
+                description:
+                  'Only works if Font Awesome is enabled. Ex: <i class="fa-solid fa-envelope"></i>',
                 condition: (data, siblingData, { user }) => {
                   if (siblingData.iconType && siblingData.iconType === 'icon') {
                     return true

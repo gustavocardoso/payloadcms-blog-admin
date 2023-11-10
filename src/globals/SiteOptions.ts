@@ -41,7 +41,7 @@ const SiteOptions: GlobalConfig = {
               type: 'upload',
               relationTo: 'logos',
               admin: {
-                width: '40%'
+                width: '30%'
               }
             },
             {
@@ -60,38 +60,30 @@ const SiteOptions: GlobalConfig = {
               ],
               defaultValue: 'disable',
               admin: {
-                width: '20%'
+                width: '15%'
               }
             },
             {
-              type: 'select',
+              type: 'text',
               name: 'fontAwesomeLink',
-              label: 'Select Version',
-              options: [
-                {
-                  label: '6.4.2 - All',
-                  value: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'
-                },
-                {
-                  label: '6.4.2 - Brands',
-                  value:
-                    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css'
-                },
-                {
-                  label: '6.4.2 - Regular',
-                  value:
-                    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/regular.min.css'
-                },
-                {
-                  label: '6.4.2 - Solid',
-                  value:
-                    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css'
-                }
-              ],
+              defaultValue:
+                'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css',
               admin: {
                 width: '20%',
+                readOnly: true,
                 condition: (data, sibilingData, _) => {
                   return sibilingData.fontAwesome === 'enable'
+                }
+              }
+            },
+            {
+              type: 'text',
+              name: 'fontAwesomeOverride',
+              admin: {
+                width: '35%',
+                description: 'Only admin can perform this action',
+                condition: (data, siblingData, { user }) => {
+                  return siblingData.fontAwesome === 'enable' && user.role === 'admin'
                 }
               }
             }

@@ -51,6 +51,13 @@ const Pages: CollectionConfig = {
       }
     },
     slug()
-  ]
+  ],
+  hooks: {
+    beforeRead: [
+      async ({ doc, req, query }): Promise<any> => {
+        console.log(doc)
+      }
+    ]
+  }
 }
 export default Pages
