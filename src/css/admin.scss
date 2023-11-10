@@ -13,11 +13,10 @@
   object-fit: cover;
   filter: grayscale(100%);
   transition: all 0.25s linear;
-  border-radius: 100%;
+  border-radius: 0.4rem;
 
   &:hover {
     filter: grayscale(0);
-    transform: scale(1.1);
   }
 }
 
