@@ -19,6 +19,7 @@ import UserAvatar from './components/UserAvatar'
 
 // import Examples from './collections/Examples';
 import Categories from './collections/Categories'
+import Ctas from './collections/Ctas'
 import Files from './collections/Files'
 import Icons from './collections/Icons'
 import Logos from './collections/Logos'
@@ -33,6 +34,7 @@ import Contacts from './collections/Contacts'
 import Navigation from './globals/Navigation'
 import SiteOptions from './globals/SiteOptions'
 import SocialLinks from './globals/SocialLinks'
+import CtaImages from './collections/MediaCta'
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_EXTERNAL_SERVER_URL,
@@ -47,10 +49,12 @@ export default buildConfig({
   collections: [
     Categories,
     Contacts,
+    Ctas,
     Files,
     Icons,
     Images,
     HeroImages,
+    CtaImages,
     Logos,
     Pages,
     Posts,
