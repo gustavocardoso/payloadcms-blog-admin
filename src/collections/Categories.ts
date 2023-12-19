@@ -1,4 +1,5 @@
 import { CollectionConfig } from 'payload/types'
+import slug from '../fields/slug'
 
 const Categories: CollectionConfig = {
   slug: 'categories',
@@ -13,7 +14,8 @@ const Categories: CollectionConfig = {
     {
       name: 'title',
       type: 'text'
-    }
+    },
+    slug()
   ]
 }
 

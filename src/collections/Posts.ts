@@ -2,9 +2,10 @@ import { CollectionConfig } from 'payload/types'
 
 import { isAdmin } from '../access/isAdmin'
 import { isAdminOrSelf } from '../access/isAdminOrSelf'
+import Content from '../blocks/Content'
 import Copy from '../blocks/Copy'
-import Alert from '../blocks/Heading'
-import Quote from '../blocks/Quote'
+import Cta from '../blocks/Cta'
+import Ribbon from '../blocks/Ribbon'
 import slug from '../fields/slug'
 
 const Posts: CollectionConfig = {
@@ -50,7 +51,8 @@ const Posts: CollectionConfig = {
               name: 'postImage',
               type: 'upload',
               relationTo: 'images',
-              required: true
+              required: true,
+              maxDepth: 2
             }
           ]
         },
@@ -60,7 +62,7 @@ const Posts: CollectionConfig = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [Copy, Alert, Quote]
+              blocks: [Content, Cta, Ribbon]
             }
           ]
         }
@@ -92,7 +94,7 @@ const Posts: CollectionConfig = {
       access: {
         update: () => false
       },
-      maxDepth: 0,
+      maxDepth: 2,
       // defaultValues can use functions to return data to populate the create form and also when making POST requests the server will use the value or function to fill in any undefined fields before validation occurs
       // defaultValue: ({ user }) => user.id,
       admin: {
@@ -114,6 +116,7 @@ const Posts: CollectionConfig = {
       type: 'relationship',
       relationTo: 'categories',
       hasMany: true,
+      maxDepth: 2,
       admin: {
         position: 'sidebar'
       }

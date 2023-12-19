@@ -31,10 +31,10 @@ import Testimonials from './collections/Testimonials'
 import Users from './collections/Users'
 
 import Contacts from './collections/Contacts'
+import CtaImages from './collections/MediaCta'
 import Navigation from './globals/Navigation'
 import SiteOptions from './globals/SiteOptions'
 import SocialLinks from './globals/SocialLinks'
-import CtaImages from './collections/MediaCta'
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_EXTERNAL_SERVER_URL,
