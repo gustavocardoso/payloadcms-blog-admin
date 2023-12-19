@@ -22,7 +22,7 @@ const Images: CollectionConfig = {
       {
         name: 'blog',
         width: 1200,
-        height: 630,
+        height: 468,
         position: 'centre'
       },
       {

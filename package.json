@@ -22,7 +22,7 @@
     "@payloadcms/richtext-slate": "^1.0.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "payload": "2.1.0",
+    "payload": "2.1.1",
     "payload-webp": "^1.1.6",
     "sharp": "^0.32.6"
   },

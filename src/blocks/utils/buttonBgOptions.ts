@@ -21,8 +21,12 @@ const buttonBgOptions: Function = (): BackgroundOption[] => [
     value: 'button-dark'
   },
   {
-    label: 'Light',
+    label: 'Light (primary text)',
     value: 'button-light'
+  },
+  {
+    label: 'Light (dark text)',
+    value: 'button-light-dark'
   },
   {
     label: 'Highlight',

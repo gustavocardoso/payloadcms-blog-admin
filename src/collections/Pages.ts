@@ -1,6 +1,7 @@
 import { CollectionConfig } from 'payload/types'
 
 import Content from '../blocks/Content'
+import Cta from '../blocks/Cta'
 import Hero from '../blocks/Hero'
 import Ribbon from '../blocks/Ribbon'
 import slug from '../fields/slug'
@@ -30,7 +31,7 @@ const Pages: CollectionConfig = {
     {
       name: 'pageLayout',
       type: 'blocks',
-      blocks: [Hero, Content, Ribbon]
+      blocks: [Content, Cta, Hero, Ribbon]
     },
     {
       name: 'status',

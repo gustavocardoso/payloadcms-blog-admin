@@ -19,6 +19,7 @@ import UserAvatar from './components/UserAvatar'
 
 // import Examples from './collections/Examples';
 import Categories from './collections/Categories'
+import Ctas from './collections/Ctas'
 import Files from './collections/Files'
 import Icons from './collections/Icons'
 import Logos from './collections/Logos'
@@ -30,6 +31,7 @@ import Testimonials from './collections/Testimonials'
 import Users from './collections/Users'
 
 import Contacts from './collections/Contacts'
+import CtaImages from './collections/MediaCta'
 import Navigation from './globals/Navigation'
 import SiteOptions from './globals/SiteOptions'
 import SocialLinks from './globals/SocialLinks'
@@ -47,10 +49,12 @@ export default buildConfig({
   collections: [
     Categories,
     Contacts,
+    Ctas,
     Files,
     Icons,
     Images,
     HeroImages,
+    CtaImages,
     Logos,
     Pages,
     Posts,
