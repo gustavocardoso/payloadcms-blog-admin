@@ -1,3 +1,4 @@
+import cors from 'cors'
 import express from 'express'
 import payload from 'payload'
 
@@ -8,6 +9,13 @@ const app = express()
 app.get('/', (_, res) => {
   res.redirect('/admin')
 })
+
+app.use(
+  cors({
+    origin: ['http://192.168.1.74:4000', 'http://localhost:3000', 'http://localhost:4000'],
+    credentials: true
+  })
+)
 
 const start = async () => {
   // Initialize Payload
