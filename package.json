@@ -8,11 +8,12 @@
     "dev": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts nodemon",
     "build:payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload build",
     "build:server": "tsc",
-    "build": "yarn build:payload && yarn build:server",
-    "server": "cross-env PAYLOAD_CONFIG_PATH=dist/payload.config.js NODE_ENV=production node dist/server.js",
+    "build": "yarn copyfiles && yarn build:payload && yarn build:server",
+    "serve": "cross-env PAYLOAD_CONFIG_PATH=dist/payload.config.js NODE_ENV=production node dist/server.js",
     "copyfiles": "copyfiles -u 1 \"src/**/*.{html,css,scss,ttf,woff,woff2,eot,svg,jpg,png}\" dist/",
     "generate:types": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload generate:types",
-    "generate:graphQLSchema": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload generate:graphQLSchema"
+    "generate:graphQLSchema": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload generate:graphQLSchema",
+    "payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload"
   },
   "dependencies": {
     "@payloadcms/bundler-webpack": "^1.0.3",
@@ -23,7 +24,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "payload": "2.1.1",
+    "payload": "2.8.2",
     "payload-webp": "^1.1.6",
     "sharp": "^0.32.6"
   },
