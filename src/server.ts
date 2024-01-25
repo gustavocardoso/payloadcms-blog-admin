@@ -12,7 +12,12 @@ app.get('/', (_, res) => {
 
 app.use(
   cors({
-    origin: ['http://192.168.1.74:4000', 'http://localhost:3000', 'http://localhost:4000'],
+    origin: [
+      'http://192.168.1.74:4000',
+      'http://localhost:3000',
+      'http://localhost:4000',
+      'https://payload-website-sigma.vercel.app'
+    ],
     credentials: true
   })
 )
