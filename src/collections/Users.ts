@@ -6,7 +6,10 @@ const Users: CollectionConfig = {
   slug: 'users',
   auth: {
     depth: 1,
-    useAPIKey: true
+    useAPIKey: true,
+    tokenExpiration: 7200, // How many seconds to keep the user logged in
+    maxLoginAttempts: 5, // Automatically lock a user out after X amount of failed logins
+    lockTime: 600 * 1000 // Time period to allow the max login attempts
   },
   admin: {
     group: 'Admin',
