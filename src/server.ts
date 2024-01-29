@@ -16,7 +16,8 @@ app.use(
       'http://192.168.1.74:4000',
       'http://localhost:3000',
       'http://localhost:4000',
-      'https://payload-website-sigma.vercel.app'
+      'https://payload-website-sigma.vercel.app',
+      'https://remix-website.fly.dev'
     ],
     credentials: true
   })
